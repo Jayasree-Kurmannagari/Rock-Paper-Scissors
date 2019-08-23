@@ -1,0 +1,17 @@
+import os
+import random
+import pyttsx3
+engine = pyttsx3.init();
+user=input('rock(r), paper(p) or scissors(s)?')
+strings='rps'
+computer=random.choice(strings)
+print(user+" vs "+computer)
+if(user==computer):
+    engine.say("the match is draw")
+    engine.runAndWait()
+elif((user=='r' and computer=='s')or(user=='p' and computer=='s')or(user=='s' and computer=='r')):
+  engine.say("computer wins better luck next time")
+  engine.runAndWait()
+else:
+  engine.say("you win hurray")
+  engine.runAndWait()
